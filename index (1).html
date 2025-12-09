@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Merry Christmas & Happy New Year — Dinesh Potnuru</title>
+  <style>
+    :root{
+      --bg1:#0f172a;
+      --bg2:#0b3d91;
+      --card:#fff;
+      --accent:#ffcc00;
+      --muted:rgba(255,255,255,0.85);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+      color:var(--card);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .card{
+      width:100%;
+      max-width:900px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border-radius:20px;
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      position:relative;
+      overflow:hidden;
+      backdrop-filter: blur(6px) saturate(1.1);
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+
+    .avatar{
+      width:88px;
+      height:88px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#ffd6a5,#ff7eb6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#102a43;
+      font-size:28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      flex-shrink:0;
+    }
+
+    h1{
+      margin:0;
+      font-size:28px;
+      line-height:1.05;
+      color:var(--muted);
+    }
+
+    p.lead{
+      margin:10px 0 0 0;
+      color:rgba(255,255,255,0.85);
+      font-size:16px;
+    }
+
+    .message{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:20px;
+      align-items:center;
+    }
+
+    .text{
+      font-size:18px;
+      color:var(--muted);
+      line-height:1.4;
+    }
+
+    .cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .btn{
+      border:0;
+      background:var(--accent);
+      color:#042a2b;
+      padding:12px 16px;
+      border-radius:12px;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow: 0 6px 18px rgba(255,204,0,0.18);
+    }
+
+    .btn.ghost{
+      background:transparent;
+      color:var(--card);
+      border:1px solid rgba(255,255,255,0.08);
+      font-weight:600;
+      padding:10px 14px;
+    }
+
+    footer{
+      margin-top:18px;
+      color:rgba(255,255,255,0.6);
+      font-size:13px;
+    }
+
+    /* Decorative snowflakes (pure CSS) */
+    .snowflake{
+      position:absolute;
+      top:-10%;
+      left:0;
+      width:100%;
+      height:120%;
+      pointer-events:none;
+      overflow:hidden;
+    }
+    .snowflake i{
+      position:absolute;
+      display:block;
+      width:8px;
+      height:8px;
+      background:rgba(255,255,255,0.9);
+      border-radius:50%;
+      opacity:0.9;
+      transform:translateY(-120vh);
+      animation:fall linear infinite;
+      filter:drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+    }
+
+    /* generate variety with nth-child */
+    .snowflake i:nth-child(odd){background:rgba(255,255,255,0.8)}
+    .snowflake i:nth-child(3n){width:6px;height:6px;opacity:0.7}
+    .snowflake i:nth-child(4n){width:10px;height:10px;opacity:0.95}
+
+    /* create different fall speeds and positions */
+    .snowflake i:nth-child(1){left:5%; animation-duration:12s; animation-delay:0s}
+    .snowflake i:nth-child(2){left:18%; animation-duration:8s; animation-delay:1s}
+    .snowflake i:nth-child(3){left:30%; animation-duration:14s; animation-delay:2s}
+    .snowflake i:nth-child(4){left:45%; animation-duration:10s; animation-delay:0.5s}
+    .snowflake i:nth-child(5){left:58%; animation-duration:16s; animation-delay:1.5s}
+    .snowflake i:nth-child(6){left:70%; animation-duration:9s; animation-delay:0s}
+    .snowflake i:nth-child(7){left:82%; animation-duration:13s; animation-delay:2.2s}
+    .snowflake i:nth-child(8){left:92%; animation-duration:11s; animation-delay:0.8s}
+
+    @keyframes fall {
+      0%{transform:translateY(-120vh) translateX(0px)}
+      100%{transform:translateY(120vh) translateX(40px)}
+    }
+
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce){
+      .snowflake i{animation:none; opacity:0.9; transform:translateY(0)}
+    }
+
+    /* Responsive */
+    @media (max-width:640px){
+      header{gap:12px}
+      .avatar{width:68px;height:68px;font-size:22px}
+      h1{font-size:20px}
+      .message{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="greetingTitle">
+    <div class="snowflake" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <header>
+      <div class="avatar" aria-hidden="true">DP</div>
+      <div>
+        <h1 id="greetingTitle">Merry Christmas, Dinesh Potnuru!</h1>
+        <p class="lead">Warm wishes for a joyful Christmas and a bright Happy New Year.</p>
+      </div>
+    </header>
+
+    <section class="message" aria-label="Personal message">
+      <div class="text" id="messageText">
+        May your holidays be filled with peace, laughter, and time with people you love.
+        Here's to new opportunities, good health, and happiness in the coming year!
+      </div>
+
+      <div class="cta" role="group" aria-label="Actions">
+        <button class="btn" id="cheerBtn" title="Send cheer">🎉 Celebrate</button>
+        <button class="btn ghost" id="shareBtn" title="Copy greeting">Copy message</button>
+      </div>
+    </section>
+
+    <footer>
+      Tip: click "Celebrate" to see a simple confetti effect. If you prefer no motion, your system's reduced-motion setting will be respected.
+    </footer>
+  </main>
+
+  <script>
+    // Small, unobtrusive confetti: creates colored circles that float up slightly then fade.
+    // Respects prefers-reduced-motion.
+    (function(){
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const cheerBtn = document.getElementById('cheerBtn');
+      const shareBtn = document.getElementById('shareBtn');
+      const messageText = document.getElementById('messageText').textContent.trim();
+
+      function createConfetti(x, y) {
+        if (prefersReduced) return;
+        const root = document.body;
+        const count = 26;
+        for (let i = 0; i < count; i++) {
+          const el = document.createElement('div');
+          const size = Math.random() * 10 + 6;
+          el.style.position = 'fixed';
+          el.style.left = (x + (Math.random() - 0.5) * 120) + 'px';
+          el.style.top = (y + (Math.random() - 0.5) * 40) + 'px';
+          el.style.width = el.style.height = size + 'px';
+          el.style.borderRadius = (Math.random() > 0.5) ? '50%' : '10%';
+          el.style.background = ['#ff7eb6','#ffd6a5','#c3f6ff','#bde2b8','#fff6a8'][Math.floor(Math.random()*5)];
+          el.style.opacity = '0.95';
+          el.style.zIndex = 9999;
+          el.style.pointerEvents = 'none';
+          el.style.transition = `transform ${1.2 + Math.random()*0.8}s cubic-bezier(.2,.8,.2,1), opacity 0.9s`;
+          root.appendChild(el);
+          requestAnimationFrame(()=>{
+            const tx = (Math.random() - 0.5) * 300;
+            const ty = -150 - Math.random()*120;
+            el.style.transform = `translate(${tx}px, ${ty}px) rotate(${Math.random()*720}deg)`;
+            el.style.opacity = '0';
+          });
+          setTimeout(()=>el.remove(), 2200);
+        }
+      }
+
+      cheerBtn.addEventListener('click', (e)=>{
+        const rect = cheerBtn.getBoundingClientRect();
+        createConfetti(rect.left + rect.width/2, rect.top + rect.height/2);
+      });
+
+      shareBtn.addEventListener('click', async ()=>{
+        const text = `Merry Christmas, Dinesh Potnuru!\n\n${messageText}\n\nWishing you a Happy New Year!`;
+        try{
+          if (navigator.share) {
+            await navigator.share({ title: 'Season\'s Greetings', text });
+          } else if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+            alert('Greeting copied to clipboard!');
+          } else {
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            ta.remove();
+            alert('Greeting copied to clipboard!');
+          }
+        }catch(err){
+          console.warn('Share/copy failed', err);
+          alert('Could not share automatically. You can copy the message manually.');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
